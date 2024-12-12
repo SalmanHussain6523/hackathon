@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+   
+
+
+  
+
+
+
+
+  <header class="bg-white ">
+    <nav class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Left Side Button (e.g., Menu or Sign Up) -->
+        <img src="images/Frame 2 (1).svg" alt="">
+
+        <!-- Middle Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Service</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Pricing</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Blogs</a>
+
+        </div>
+
+        <!-- Right Side Logo -->
+        <button class="bg-black text-[white] w-20">SignIn</button>
+      </div>
+
+      <!-- Mobile Menu (hamburger) -->
+      <div class="md:hidden flex items-center justify-between">
+        <button class="text-blue-500 focus:outline-none">
+          SignIn
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div class="md:hidden flex flex-col space-y-4 px-4 py-6 bg-gray-200">
+        <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Service</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Pricing</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Blogs</a>
+      <button class="text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        Sign Up
+      </button>
+    </div>
+  </header>
+
+
+ <!-- Content Section -->
+ <div class="container py-5">
+    <div class="row">
+      <!-- Left Column: Text Content -->
+      <div class="col-12 col-md-6">
+        <div class="main-header-content h-100 d-flex flex-column justify-content-center">
+          <div>
+            <h1 class="display-4 fw-bold">
+              Streamlining your journey to digital dominance.
+            </h1>
+          </div>
+          <div>
+            <p class="fs-4 mt-10">
+              Streamlining your journey to digital dominance. Effortless
+              hosting solutions for a seamless online presence.
+            </p>
+          </div>
+          <div class="btn-box mt-9">
+            <button type="button" class="btn btn-theme-black bg-black text-[white]">
+              Start a 10-Day Free Trial
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Image Box -->
+      <div class="col-12 col-md-6">
+        <div class="image-box text-center">
+          <img
+            src="images/idea-launch 1.png"
+            alt="Illustration"
+            class="img-fluid"
+            style="max-width: 100%; height: auto;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   
+  
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// Function to check if an element is in the viewport
+function isInViewport(el) {
+const rect = el.getBoundingClientRect();
+return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Function to add slide-in animation class when card is in view
+function checkCards() {
+document.querySelectorAll('.card-content').forEach((cardContent) => {
+  if (isInViewport(cardContent) && !cardContent.classList.contains('visible')) {
+    cardContent.classList.add('visible');
+  }
+});
+}
+
+// Check the cards' visibility on scroll
+window.addEventListener('scroll', checkCards);
+
+// Trigger the function on page load to check if any cards are in view immediately
+document.addEventListener('DOMContentLoaded', checkCards);
+</script>
+
+
+
+  
+   <!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+<script>
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Event Listener for Dark Mode Toggle
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  darkModeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+</script>
+
+<!-- <style>
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; /* Set an explicit width */
+  height: 50px; /* Set an explicit height */
+  border: none;
+  
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #5cae56;
+}
+
+/* Ensure Other Buttons Are Not Affected */
+button {
+  width: auto; /* Prevent global button width issues */
+  max-width: none; /* Override unwanted constraints */
+}
+</style> -->
+
+
+<!-- Content Section -->
+<div class="container py-5">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-dark rounded-3 h-100">
+          <div class="card-body d-flex align-items-start ">
+            <img src="images/image 1.svg" class="img-fluid card-icon me-3" alt="Image 1">
+            <div>
+              <h5 class="card-title">Seamless Integration</h5>
+              <p class="card-text ">HostEase offers seamless integration of hosting and domain management services, providing users with a unified platform to effortlessly manage their online presence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-dark rounded-3 h-100">
+          <div class="card-body d-flex align-items-middle">
+            <img src="images/image 2.svg" class="img-fluid card-icon me-3" alt="Image 2">
+            <div>
+              <h5 class="card-title">Innovation in Simplicity</h5>
+              <p class="card-text">We pride ourselves on innovative solutions that prioritize simplicity without compromising on performance or security, making it ideal choice for both beginners and experienced users alike.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-dark rounded-3 h-100">
+          <div class="card-body d-flex align-items-start">
+            <img src="images/image 3.svg" class="img-fluid card-icon me-3" alt="Image 3">
+            <div>
+              <h5 class="card-title">Personalized Support</h5>
+              <p class="card-text">Our dedicated 24/7 support team goes the extra mile to provide personalized assistance, ensuring that every user receives the help they need to succeed online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Custom CSS
+  <style>
+    /* Card Custom Styles */
+    .card {
+      background-color: transparent; /* Transparent background */
+      border: 2px solid black;       /* Black border */
+      height: 100%;                  /* Ensures all cards are equal height */
+    }
+  
+    .card-body {
+      display: flex;                 /* Flexbox layout for content */
+      align-items: start;            /* Align items to the top */
+    }
+  
+    .card-icon {
+      width: 40px;                   /* Set a fixed width for the image */
+      height: 40px;                  /* Set a fixed height for the image */
+      object-fit: cover;             /* Ensure image fits well */
+    }
+  
+    .card-title {
+      font-weight: bold;             /* Makes the title bold */
+      margin-bottom: 5px;            /* Adds space below the title */
+    }
+  
+    .card-text {
+      font-size: 0.9rem;             /* Slightly smaller font for text */
+      margin: 0;                     /* Removes default margin */
+    }
+  
+    .h-100 {
+      height: 100%;                  /* Ensures equal height for all cards */
+    }
+  </style>
+ -->
+
+
+
+ <!-- Content Section -->
+ <div class="container py-5">
+    <div class="row">
+
+            <!-- Right Column: Image Box -->
+      <div class="col-12 col-md-6">
+        <div class="image-box text-center">
+          <img
+            src="images/business-success-chart 1.png"
+            alt="Illustration"
+            class="img-fluid"
+            style="max-width: 100%; height: auto;"
+          />
+        </div>
+      </div>
+      <!-- Left Column: Text Content -->
+      <div class="col-12 col-md-6">
+        <div class="main-header-content h-100 d-flex flex-column justify-content-center">
+          <div>
+            <h1 class="display-6 fw-bold">
+                Secure web hosting that
+                grows with your business
+            </h1>
+          </div>
+          <div>
+            <p class="fs-4 mt-10">
+                Our secure web hosting services are designed to evolve seamlessly alongside your business. With robust security measures in place, including SSL encryption and regular backups, your data stays protected at all times.Trust HostEase to safeguard 
+                your online presence while supporting your business's growth trajectory.
+            </p>
+          </div>
+     
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+
+  <h1 class=" d-flex justify-content-center font-bold text-6xl">Our Features</h1>
+
+
+  <div class="container py-5">
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2>Our Features</h2>
+    </div>
+  
+    <!-- Cards -->
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <!-- Image -->
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p1.png" alt="Feature 1" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <!-- Heading at the bottom of image -->
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">Easy Site Builder</h5>
+            <!-- Paragraph -->
+            <p class="card-text w-100 text-left">
+              Build your website with ease using our intuitive drag-and-drop site builder, no coding required. Create stunning, professional-looking websites in minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p2.png" alt="Feature 2" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">Domain Registration</h5>
+            <p class="card-text w-100 text-left">
+              Secure your online identity with ease by registering your domain name through us. Choose from a wide range of domain extensions and manage your domain effortlessly.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p3.png" alt="Feature 3" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">Reliable Hosting</h5>
+            <p class="card-text w-100 text-left">
+              Experience top-notch performance and reliability with our hosting solutions. Benefit from high uptime, fast loading speeds, and robust security measures.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p4.png" alt="Feature 4" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">24/7 Customer Support</h5>
+            <p class="card-text w-100 text-left">
+              Get peace of mind with our round-the-clock customer support. Our team of experts is available 24/7 to assist you with any questions or issues you may encounter.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p5.png" alt="Feature 5" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">One-Click Installs</h5>
+            <p class="card-text w-100 text-left">
+              Install popular web applications like WordPress, etc. with just one click. One-click install feature simplifies the process of setting up your website, saving you time and effort.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-black bg-transparent">
+          <div class="card-body d-flex flex-column align-items-start">
+            <div class="mb-3 w-100 text-center">
+              <img src="images/p6.png" alt="Feature 6" class="img-fluid" style="max-width: 100px;">
+            </div>
+            <h5 class="card-title w-100 text-center mb-2 mt-auto">Scalable Hosting Plans</h5>
+            <p class="card-text w-100 text-left">
+              Scale your hosting resources effortlessly as your website grows. With our plans, you can easily upgrade your resources based on your performance needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .card {
+      border: 1px solid black; /* Black border */
+      background-color: transparent; /* Transparent background */
+      border-radius: 8px; /* Slightly rounded corners */
+      padding: 1rem;
+    }
+  
+    .card img {
+      max-width: 100px; /* Adjust image size */
+    }
+  
+    .card-title {
+      font-size: 1.3rem; /* Adjust heading size */
+      font-weight: bold;
+    }
+  
+    .card-text {
+      font-size: 1rem; /* Standard text size */
+      color: #333; /* Neutral color */
+    }
+  
+    .text-center h2 {
+      font-size: 2.5rem; /* Section heading size */
+      font-weight: bold;
+    }
+  
+    .mt-auto {
+      margin-top: auto; /* Pushes heading to the bottom */
+    }
+  
+    /* Hover Effect */
+
+  </style>
+    
+  
+  
+  <!-- New Section with Heading and Email Input -->
+  <div class="container py-5">
+    <div class="row align-items-center my-5">
+      <!-- Left Column (Heading) -->
+      <div class="col-12 col-md-6 text-start mb-3 mb-md-0">
+        <h3 class="heading-text">Sign up for the best <br> web hosting service today!</h3>
+      </div>
+  
+      <!-- Right Column (Email Input with Button inside) -->
+      <div class="col-12 col-md-6">
+        <!-- Input Group for Email and Button -->
+        <div class="input-group" style="max-width: 400px; margin-left: auto; margin-right: auto;">
+          <!-- Email Input -->
+          <input type="email" class="form-control" placeholder="Enter your email" style="background-color: transparent; border: 1px solid black;">
+  
+          <!-- Get Started Button inside the Input Group -->
+          <button class="btn btn-dark rounded-2">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Custom CSS -->
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+  
+    .heading-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 1.4;
+      color: #333; /* Set a neutral text color */
+    }
+  
+    /* Center the heading text for small screens and large screens */
+    .col-md-6 h3 {
+      text-align: center;
+    }
+  
+    .input-group {
+      width: 100%;
+      max-width: 400px; /* Reduced width for input and button group */
+      margin: 0 auto; /* Center the input group */
+    }
+  
+    .input-group input {
+      background-color: transparent;
+      border: 1px solid black;
+    }
+  
+    .input-group button {
+      background-color: black;
+      border: 1px solid black;
+      color: white;
+    }
+  
+    /* Make sure the container is responsive */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    /* Ensure that the text is well-spaced and responsive */
+    @media (max-width: 768px) {
+      .heading-text {
+        font-size: 1.5rem; /* Adjust font size for smaller devices */
+      }
+    }
+  </style>
+
+<div class="d-flex justify-between margin-left-20px">
+<div class="logo" >
+    <div>
+        <img src="images/Frame 2 (1).svg" alt="">
+        </div>
+<div class="mt-10">
+        <p class="w-30">Our vision is to empower individuals <br>and businesses to thrive online by <br> providing effortless hosting solutions.<br> We aim to streamline the journey to<br> digital success, making it accessible <br>to all.</p>
+    </div>
+    <div>
+        <sub>@ 2024 Host Ease All Rights Reserved</sub>
+    </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="menu-container">
+                <div class="menu">
+                    <h3>Quick Menu</h3>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="menu">
+                    <h3>Resources</h3>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Community</a>
+                    <a href="#">Jobs</a>
+                    <div class="d-flex font-size-5px justify-between margin-right-20px ">
+                    <img src="images/Vector (1).svg" alt="">
+                    <img src="images/Vector.svg" alt="">
+                    <img src="images/Vector (2).svg" alt="">
+                </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Get the button
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // Show or hide the button when scrolling
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.style.display = "block"; // Show button
+    } else {
+      scrollToTopBtn.style.display = "none"; // Hide button
+    }
+  };
+
+  // Scroll to top when the button is clicked
+  scrollToTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
+</body>
+</html>

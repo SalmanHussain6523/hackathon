@@ -1,0 +1,111 @@
+.card-text{
+    margin-left: 10px;
+}
+
+
+.card {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid black;       /* Black border */
+    height: 100%;                  /* Ensures all cards are equal height */
+  }
+
+  .card-body {
+    display: flex;                 /* Flexbox layout for content */
+    align-items: start;            /* Align items to the top */
+  }
+
+  .card-icon {
+    width: 40px;                   /* Set a fixed width for the image */
+    height: 40px;                  /* Set a fixed height for the image */
+    object-fit: cover;             /* Ensure image fits well */
+  }
+
+  .card-title {
+    font-weight: bold;             /* Makes the title bold */
+    margin-bottom: 5px;            /* Adds space below the title */
+  }
+
+  .card-text {
+    font-size: 0.9rem;             /* Slightly smaller font for text */
+    margin: 0;                     /* Removes default margin */
+  }
+
+  .h-100 {
+    height: 100%;                  /* Ensures equal height for all cards */
+  }
+
+  <style>
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; /* Set an explicit width */
+  height: 50px; /* Set an explicit height */
+  border: none;
+  
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #5cae56;
+}
+
+/* Ensure Other Buttons Are Not Affected */
+button {
+  width: auto; /* Prevent global button width issues */
+  max-width: none; /* Override unwanted constraints */
+}
+</style>
+
+.head{
+    font-size: large;
+    font-weight: bold;
+    width: 50px;
+}
+
+.email-input {
+    background-color: transparent;
+    border: 1px solid black;
+}
+.email-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+.input-group-text {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.menu {
+    text-align: left;
+}
+.menu h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+.logo{
+    margin-left: 50px;
+}
